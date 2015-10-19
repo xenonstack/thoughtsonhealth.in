@@ -10,7 +10,7 @@ __copyright__ = "Copyright (c) 2015 Abhay Arora."
 __email__ = "belieflimitless@icloud.com"
 __date__ = "19/10/15"
 
-API = Blueprint('API')
+API = Blueprint('API', __name__)
 
 @API.route('/')
 def index():

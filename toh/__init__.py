@@ -14,5 +14,7 @@ __date__ = "19/10/15"
 
 __all__ = [Server, API, MongoDB]
 
-def create_app(conf):
-    pass
+def create_server(conf):
+    server = Server(__name__)
+    server.register_blueprint(API)
+    return server

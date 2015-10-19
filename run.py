@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """ run.py: thoughtsoncloud.in """
+
 from ConfigParser import ConfigParser
-from toh import create_app
+from toh import create_server
 import sys
 
 __author__ = "Abhay Arora ( @BeliefLimitless )"
@@ -16,8 +17,8 @@ if len(sys.argv) < 2:
 else:
     conf = ConfigParser()
     conf.read(sys.argv[1])
-    app = create_app(conf)
+    server = create_server(conf)
     try:
-        app.run()
+        server.run()
     except KeyboardInterrupt:
         print '\nEXIT : Interrupt received.'
